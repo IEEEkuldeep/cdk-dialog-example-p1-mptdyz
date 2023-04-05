@@ -1,0 +1,39 @@
+<h1>Custom dialog with CDK</h1>
+
+<h2>With component (recommended)</h2>
+
+<p>
+  <button (click)="showDialog()">
+    Show dialog
+  </button>
+</p>
+
+<p>
+  <button (click)="showDialogDisableClose()">
+    Show dialog and disable close
+  </button>
+</p>
+
+<p>
+  <button (click)="showDialogWithData()">
+    Show dialog with data!
+  </button>
+</p>
+
+<h2>With template</h2>
+
+<p>
+  <button (click)="showDialogWithTemplate(template)">
+    Show dialog using template!
+  </button>
+</p>
+
+<ng-template #template let-data let-dialog="dialog">
+  <h2>Template</h2>
+
+  <button (click)="showDialogWithTemplate(template)">Dialogception</button>
+
+  <p>Passed data: {{ data | json }}</p>
+
+  <button (click)="dialog.close()">Close</button>
+</ng-template>

@@ -1,0 +1,7 @@
+<h2>Example dialog</h2>
+
+<p>Passed data: {{ data | json }}</p>
+
+<button p1DialogClose>Close by directive</button>
+<button [p1DialogClose]="'Done'">Close by directive (with data)</button>
+<button (click)="closeManually()">Close manually</button>
